@@ -5,14 +5,25 @@ from langchain.chains.sequential import SequentialChain
 from dotenv import load_dotenv
 import argparse
 
-load_dotenv()
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--task", default="return a list of numbers")
 parser.add_argument("--language", default="python")
 args = parser.parse_args()
 
+load_dotenv()
+
 llm = OpenAI() 
+
+
+
+# -----SIMPLE CODE-----
+
+# result = llm("Write a very very short poem")
+# print("result")
+
+
+
+# -----EMPLOYING CHAINS-----
 
 code_prompt = PromptTemplate(
     input_variables=["language", "task"],
