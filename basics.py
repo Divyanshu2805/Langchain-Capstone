@@ -15,12 +15,10 @@ load_dotenv()
 llm = OpenAI() 
 
 
-
 # -----SIMPLE CODE-----
 
 # result = llm("Write a very very short poem")
 # print("result")
-
 
 
 # -----EMPLOYING CHAINS-----
